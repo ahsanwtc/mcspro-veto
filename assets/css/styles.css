@@ -1,0 +1,148 @@
+
+
+
+.view {
+    margin: 0 auto;
+    width: 384px;
+}
+
+.button-list {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.gametype,
+.button {
+    width: 182px;
+    margin: 5px;
+    
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.custom-maplist-caption {
+    width: 364px;
+    margin: 5px 5px 25px 5px;
+    padding: 5px;
+    
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.custom-maplist {
+    width: 364px;
+    height: 128px;
+    
+    margin: 0;
+    
+    resize: none;
+}
+
+.map {
+    text-align: center;
+    text-transform: uppercase;
+    
+    height: 64px;
+    line-height: 64px;
+    
+    margin: 5px;
+    color: white;
+    font-size:x-large;
+    font-weight:bold;
+}
+
+.vetoed:NOT(.animation-running) {
+    position: relative;
+}
+
+.vetoed:NOT(.animation-running):after {
+    position: absolute;
+    content:"";
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: black;
+    opacity:.75;
+}
+
+.vetoed.left:NOT(.animation-running):after {
+    content:"VETO";
+    font-weight: bold;
+    color: red;
+    text-align: left;
+    padding-left: 16px;
+    /*width: 358px;*/
+}
+
+.vetoed.right:NOT(.animation-running):after {
+    content:"VETO";
+    font-weight: bold;
+    color: red;
+    text-align: right;
+    padding-right: 16px;
+    /*width: 358px;*/
+}
+
+.picked:NOT(.animation-running) {
+    position: relative;
+}
+
+.picked:NOT(.animation-running):after {
+    position: absolute;
+    content:"";
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    -webkit-box-shadow: inset 0px 0px 80px 0px rgba(255,255,255,1);
+    -moz-box-shadow: inset 0px 0px 80px 0px rgba(255,255,255,1);
+    box-shadow: inset 0px 0px 80px 0px rgba(255,255,255,1);
+}
+
+.picked.left:NOT(.animation-running):after {
+    content:"PICK";
+    font-weight: bold;
+    color: limegreen;
+    text-align: left;
+    padding-left: 16px;
+    /*width: 358px;*/
+}
+
+.picked.right:NOT(.animation-running):after {
+    content:"PICK";
+    font-weight: bold;
+    color: limegreen;
+    text-align: right;
+    padding-right: 16px;
+    /*width: 358px;*/
+}
+
+.animation-running .circle {
+    position: absolute;
+	border-radius: 50%;
+	width: 0px;
+	height: 0px; 
+    
+    background-color: rgba(255,255,255,0.2);    
+    background: -webkit-radial-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.0));
+    background: -moz-radial-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.0));
+    background: radial-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.0));
+}
+    
+.animation-running {
+    display: block;
+    position: relative;   
+    
+    overflow: hidden;
+}
+
+.button:hover,
+.gametype-list:NOT(.disabled) .animated-button:hover,
+.maplist:not(.final) .animated-button:NOT(.vetoed):hover {
+    -webkit-box-shadow: 0px 0px 2px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 2px rgba(255,255,255,1);
+    box-shadow: 0px 0px 2px rgba(255,255,255,1);
+}

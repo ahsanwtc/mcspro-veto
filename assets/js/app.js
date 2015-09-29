@@ -1,0 +1,1 @@
+var vetoApp = angular.module('vetoApp', ['ngRoute', 'ngResource']);

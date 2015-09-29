@@ -1,0 +1,52 @@
+.map {
+    background: #fff url(../images/default.jpg) no-repeat right center;
+    background-size: 384px 192px;
+}
+
+.map.de_dust2 {
+    background-image: url(../images/de_dust2.jpg);
+}
+
+.map.de_inferno {
+    background-image: url(../images/de_inferno.jpg);
+}
+
+.map.de_nuke {
+    background-image: url(../images/de_nuke.jpg);
+}
+
+.map.de_mirage {
+    background-image: url(../images/de_mirage.jpg);
+}
+
+.map.de_cache {
+    background-image: url(../images/de_cache.jpg);
+}
+
+.map.de_cobblestone {
+    background-image: url(../images/de_cobblestone.jpg);
+}
+
+.map.de_overpass {
+    background-image: url(../images/de_overpass.jpg);
+}
+
+.map.de_aztec {
+    background-image: url(../images/de_aztec.jpg);
+}
+
+.map.de_dust {
+    background-image: url(../images/de_dust.jpg);
+}
+
+.map.de_season {
+    background-image: url(../images/de_season.jpg);
+}
+
+.map.de_train {
+    background-image: url(../images/de_train.jpg);
+}
+
+.map.de_vertigo {
+    background-image: url(../images/de_vertigo.jpg);
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="vetoApp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+	
+	<title>mcspro - Map Veto</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<!-- Bootstrap itself -->
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<!-- load angular via CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.6/angular-route.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.6/angular-resource.min.js"></script>
+
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="assets/css/magister.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/map-images.css">
+	<link rel="stylesheet" href="assets/css/animated-checkboxes.css">
+
+	<!-- Fonts -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+</head>
+
+<!-- use "theme-invert" class on bright backgrounds, also try "text-shadows" class -->
+<body class="theme-invert">
+
+<nav class="mainmenu">
+	<div class="container">
+		<div class="dropdown">
+			<button type="button" class="navbar-toggle" data-toggle="dropdown"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			<!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+				<li>
+					<form class="form-inline" ng-submit="submit()" ng-controller="loginController">
+						<div class="form-group">
+							<input type="text" class="form-control" id="adminkey" placeholder="admin key" ng-model="adminkey">
+						</div>
+						<button type="submit" class="btn btn-default">Login</button>
+					</form>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+<!-- Main (Home) section -->
+<section class="section" id="head">
+	<div class="container">
+		<div class="row">
+		    <div class="col-md-4 col-md-offset-4">
+		        <img src="assets/images/logo.png" class="img-responsive" alt="Responsive image">
+		    </div>
+		    <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
+		        <h1 class="title">Map Veto</h1>
+		        <h3 class="subtitle">Team A vs Team B</h3>
+		    </div> <!-- /col -->
+		</div> <!-- /row -->
+		<div ng-view></div>
+	</div>
+</section>
+
+
+<!-- Load js libs only when the page is loaded. -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="assets/js/modernizr.custom.72241.js"></script>
+<!-- Custom template scripts -->
+<script src="assets/js/magister.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/routes.js"></script>
+<script src="assets/js/services.js"></script>
+<script src="assets/js/controllers.js"></script>
+<script src="assets/js/directives.js"></script>
+
+
+
+
+
+
+</body>
+</html>
