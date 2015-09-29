@@ -1,13 +1,14 @@
 <?php
  
 require 'vendor/autoload.php';
+require ("config.php");
 
 function getDB()
 {
-    $dbhost = "localhost";
-    $dbuser = "root";
-    $dbpass = "coder";
-    $dbname = "mapveto";
+    $dbhost = DB_HOST;
+    $dbuser = DB_USER;
+    $dbpass = DB_PASSWORD;
+    $dbname = DB_DATABASE;
  
     $mysql_conn_string = "mysql:host=$dbhost;dbname=$dbname";
     $dbConnection = new PDO($mysql_conn_string, $dbuser, $dbpass); 
@@ -75,7 +76,7 @@ $app->get('/getmappool/', function () {
  
     } catch(PDOException $e) {
         $app->response()->setStatus(404);
-        echo '{"error":{"text":'. $e->getMessage() .'}}';
+        echo '[{"error":{"text":'. $e->getMessage() .'}}]';
     }
 }); 
  
